@@ -2,7 +2,7 @@
  * @Author: r1ngo
  * @Date: 2022-03-20 10:12:21
  * @LastEditors: r1ngo
- * @LastEditTime: 2022-03-20 10:15:07
+ * @LastEditTime: 2022-03-20 11:28:10
  * @Description: ez pz lemon squezzy
  */
 import { Component } from '@angular/core';
