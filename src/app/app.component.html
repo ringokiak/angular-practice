@@ -2,9 +2,20 @@
  * @Author: r1ngo
  * @Date: 2022-03-20 10:12:21
  * @LastEditors: r1ngo
- * @LastEditTime: 2022-03-20 10:59:04
+ * @LastEditTime: 2022-03-21 17:11:05
  * @Description: ez pz lemon squezzy
 -->
-<h1>Hello World</h1>
+<h1>{{ title }}</h1>
 <!-- myc01 -->
-<app-myc01></app-myc01>
+<button (click)="show = !show">控制组件隐藏显示</button>
+<button (click)="changeChild()">修改组件中的变量</button>
+<!-- 利用 # 语法糖，给组件绑定唯一标识，方便父组件调用
+通过声明的方式向子组件传参
+通过声明事件击发装置，接收来自子组件的传参 -->
+<app-myc01
+  #myc01
+  *ngIf="show"
+  fatherName="lexon"
+  [fatherInfo]="info"
+  (titleEvent)="titleChange($event)"
+></app-myc01>

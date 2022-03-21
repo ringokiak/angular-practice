@@ -2,7 +2,7 @@
  * @Author: r1ngo
  * @Date: 2022-03-20 10:47:39
  * @LastEditors: r1ngo
- * @LastEditTime: 2022-03-20 15:14:20
+ * @LastEditTime: 2022-03-21 18:01:58
  * @Description: ez pz lemon squezzy
 -->
 <!-- ----------------------------------------------------------------------- -->
@@ -112,4 +112,24 @@
   <div *ngFor="let item of list; let i = index">
     {{ item.name }} is {{ item.gender | gender: "en" }}
   </div>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+<!--                                  父兹组件传参                                -->
+<!-- ----------------------------------------------------------------------- -->
+<div class="container">
+  <!-- 父组件传递的参数可以直接使用 -->
+  <div>{{ fatherName }}</div>
+  <div>{{ fatherInfo.age }}</div>
+  <div>{{ fatherInfo.gender | gender }}</div>
+  <!-- 通过接收的击发装置，利用 emit 击发，并传递参数 -->
+  <button (click)="titleEvent.emit('ringo up up')">给父组件改title</button>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+<!--                            服务（类似 vue 的 vuex）                            -->
+<!-- ----------------------------------------------------------------------- -->
+<div class="container">
+  <span>{{ users.userLevel }}</span>
+  <button (click)="users.users.push('打工人')">加人</button>
+  <button (click)="users.users.pop()">减人</button>
+  <div *ngFor="let item of users.users">{{ item }}</div>
 </div>
