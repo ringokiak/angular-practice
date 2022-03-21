@@ -33,10 +33,12 @@ export class Myc01Component implements OnInit {
     {
       id: 1,
       name: 'ringo',
+      gender: 1,
     },
     {
       id: 2,
       name: 'iris',
+      gender: 0,
     },
   ];
   today: number = new Date().getTime();
