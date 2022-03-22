@@ -1,0 +1,19 @@
+<!--
+ * @Author: r1ngo
+ * @Date: 2022-03-22 10:16:34
+ * @LastEditors: r1ngo
+ * @LastEditTime: 2022-03-22 11:17:23
+ * @Description: ez pz lemon squezzy
+-->
+<!-- ----------------------------------------------------------------------- -->
+<!--                                http请求结果展示                             -->
+<!-- ----------------------------------------------------------------------- -->
+<button (click)="getList()">重新请求</button>
+<ng-container *ngIf="person">
+  <div>姓名：{{ person.name }}</div>
+  <div>年龄：{{ person.age }}</div>
+  <div>爱好：</div>
+  <div *ngFor="let item of person.hobbies">
+    级{{ item.rank }}{{ item.name }}
+  </div>
+</ng-container>

@@ -1,0 +1,28 @@
+<!--
+ * @Author: r1ngo
+ * @Date: 2022-03-22 11:36:34
+ * @LastEditors: r1ngo
+ * @LastEditTime: 2022-03-22 14:15:33
+ * @Description: ez pz lemon squezzy
+-->
+<!-- ----------------------------------------------------------------------- -->
+<!--                                数据、事件、属性                                 -->
+<!-- ----------------------------------------------------------------------- -->
+<!-- 中括号绑定属性 -->
+<h3 [class]="'my_h3'">myc01</h3>
+<!-- 花括号进行插值 -->
+<div>my name is {{ name }}</div>
+<!-- 对象函数必须带括号，表示执行 -->
+<div>I'm {{ getGender() }}</div>
+<!-- 括号绑定事件，同理，对象函数必须带括号 -->
+<button (click)="sayHi()">sayHi</button>
+<!-- 富文本解析 -->
+<div [innerHTML]="richText"></div>
+<!-- 双向绑定语法糖，angular默认不开启此语法糖，需要手动引入依赖 -->
+<input type="text" [(ngModel)]="inputValue" />
+<span>{{ inputValue }}</span>
+<!-- 动态Style -->
+<div [ngStyle]="{ color: '#333', fontSize: size + 'px' }">动态Style</div>
+<!-- 动态Class（事件表达式中无法直接使用自增++，自减--或复合运算符+=/-=） -->
+<button (click)="size = size + 1" [ngClass]="{ increase: true }">变大</button>
+<button (click)="size = size - 1" [ngClass]="{ decrease: true }">变小</button>

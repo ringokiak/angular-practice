@@ -2,20 +2,46 @@
  * @Author: r1ngo
  * @Date: 2022-03-20 10:12:21
  * @LastEditors: r1ngo
- * @LastEditTime: 2022-03-21 17:11:05
+ * @LastEditTime: 2022-03-22 14:15:59
  * @Description: ez pz lemon squezzy
 -->
 <h1>{{ title }}</h1>
-<!-- myc01 -->
-<button (click)="show = !show">控制组件隐藏显示</button>
-<button (click)="changeChild()">修改组件中的变量</button>
-<!-- 利用 # 语法糖，给组件绑定唯一标识，方便父组件调用
-通过声明的方式向子组件传参
-通过声明事件击发装置，接收来自子组件的传参 -->
-<app-myc01
-  #myc01
-  *ngIf="show"
-  fatherName="lexon"
-  [fatherInfo]="info"
-  (titleEvent)="titleChange($event)"
-></app-myc01>
+<!-- 切换组件 -->
+<div>
+  <button (click)="active = 0">隐藏全部</button>
+  <button (click)="active = 1">数据、事件、属性</button>
+  <button (click)="active = 2">指令集</button>
+  <button (click)="active = 3">管道</button>
+  <button (click)="active = 4">父子组件传参</button>
+  <button (click)="active = 5">生命周期</button>
+  <button (click)="active = 6">服务</button>
+  <button (click)="active = 7">网络服务</button>
+</div>
+<span [ngSwitch]="active">
+  <!-- 数据、事件、属性 -->
+  <app-dep *ngSwitchCase="1"></app-dep>
+  <!-- 指令集 -->
+  <app-dir *ngSwitchCase="2"></app-dir>
+  <!-- 管道 -->
+  <app-pip *ngSwitchCase="3"></app-pip>
+  <!-- 父子组件传参 -->
+  <!-- 利用 # 语法糖，给组件绑定唯一标识，方便父组件调用 -->
+  <!-- 通过声明的方式向子组件传参；通过声明事件击发装置，接收来自子组件的传参 -->
+  <ng-container *ngSwitchCase="4">
+    <button (click)="changeChild()">修改组件中的变量</button>
+    <app-arg
+      #arg
+      fatherName="lexon"
+      [fatherInfo]="info"
+      (titleEvent)="titleChange($event)"
+    ></app-arg>
+  </ng-container>
+  <!-- 生命周期 -->
+  <app-lif *ngSwitchCase="5"></app-lif>
+  <!-- 服务 -->
+  <app-ser *ngSwitchCase="6"></app-ser>
+  <!-- 网络服务 -->
+  <app-http *ngSwitchCase="7"></app-http>
+  <!-- switch 中的其余默认情况 -->
+  <ng-container *ngSwitchDefault></ng-container>
+</span>

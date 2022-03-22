@@ -1,0 +1,7 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                            服务（类似 vue 的 vuex）                            -->
+<!-- ----------------------------------------------------------------------- -->
+<span>{{ users.userLevel }}</span>
+<button (click)="users.users.push('打工人')">加人</button>
+<button (click)="users.users.pop()">减人</button>
+<div *ngFor="let item of users.users">{{ item }}</div>

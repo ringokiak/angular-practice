@@ -1,0 +1,20 @@
+<!--
+ * @Author: r1ngo
+ * @Date: 2022-03-22 13:48:54
+ * @LastEditors: r1ngo
+ * @LastEditTime: 2022-03-22 14:04:22
+ * @Description: ez pz lemon squezzy
+-->
+<!-- ----------------------------------------------------------------------- -->
+<!--                                  父子组件传参                                -->
+<!-- ----------------------------------------------------------------------- -->
+<!-- 子组件本身的参数可以被父组件调用和修改 -->
+<div>
+  {{ sonName }}
+</div>
+<!-- 父组件传递的参数可以直接使用 -->
+<div>{{ fatherName }}</div>
+<div>{{ fatherInfo.age }}</div>
+<div>{{ fatherInfo.gender | gender }}</div>
+<!-- 通过接收的击发装置，利用 emit 击发，并传递参数 -->
+<button (click)="titleEvent.emit('ringo up up')">给父组件改title</button>

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Myc01Component } from './myc01.component';
+import { HttpComponent } from './http.component';
 
-describe('Myc01Component', () => {
-  let component: Myc01Component;
-  let fixture: ComponentFixture<Myc01Component>;
+describe('HttpComponent', () => {
+  let component: HttpComponent;
+  let fixture: ComponentFixture<HttpComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Myc01Component ]
+      declarations: [ HttpComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Myc01Component);
+    fixture = TestBed.createComponent(HttpComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

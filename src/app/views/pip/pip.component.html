@@ -1,0 +1,35 @@
+<!--
+ * @Author: r1ngo
+ * @Date: 2022-03-22 13:45:59
+ * @LastEditors: r1ngo
+ * @LastEditTime: 2022-03-22 13:46:50
+ * @Description: ez pz lemon squezzy
+-->
+<!-- ----------------------------------------------------------------------- -->
+<!--                        管道（类似 vue 中的 filter 过滤器）                         -->
+<!-- ----------------------------------------------------------------------- -->
+<!-- 大写 -->
+<div>{{ "hello" | uppercase }}</div>
+<!-- 小写 -->
+<div>{{ "HELLO" | lowercase }}</div>
+<!-- 首字母大写 -->
+<div>{{ "hello" | titlecase }}</div>
+<!-- 百分数 -->
+<div>{{ 0.5555 | percent }}</div>
+<!-- 通过传参来限制整数位和小数位的位数 -->
+<div>{{ 0.5555 | percent: "2.2" }}</div>
+<!-- 价格 -->
+<div>{{ 99 | currency }}</div>
+<!-- 传参来改变金额符号 -->
+<div>{{ 99 | currency: "￥" }}</div>
+<!-- 日期转换 -->
+<div>{{ today | date }}</div>
+<!-- 传参改变日期格式 -->
+<div>{{ today | date: "yyyy-MM-dd HH:mm:ss" }}</div>
+<!-- 使用自定义的管道 -->
+<div>
+  {{ 1 | gender }}
+</div>
+<div>
+  {{ 0 | gender: "en" }}
+</div>
