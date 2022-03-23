@@ -2,7 +2,7 @@
  * @Author: r1ngo
  * @Date: 2022-03-20 10:12:21
  * @LastEditors: r1ngo
- * @LastEditTime: 2022-03-22 14:12:53
+ * @LastEditTime: 2022-03-23 09:37:46
  * @Description: ez pz lemon squezzy
  */
 import { NgModule } from '@angular/core';
@@ -14,7 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { UpperDirective } from './directive/upper.directive';
 // 引入自定义管道（老版本每次修改配置文件需重启服务才生效）
 import { GenderPipe } from './pipe/gender.pipe';
-// 引入HTTP服务
+// 引入 HTTP 服务
 import { HttpClientModule } from '@angular/common/http';
 // 引入自定义组件
 import { AppComponent } from './app.component';

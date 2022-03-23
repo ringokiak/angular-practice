@@ -2,7 +2,7 @@
  * @Author: r1ngo
  * @Date: 2022-03-20 10:12:21
  * @LastEditors: r1ngo
- * @LastEditTime: 2022-03-22 14:04:59
+ * @LastEditTime: 2022-03-23 10:24:24
  * @Description: ez pz lemon squezzy
  */
 import { Component, ViewChild } from '@angular/core';
@@ -26,7 +26,7 @@ export class AppComponent {
     gender: 1,
   };
   // 通过 ViewChild 方法，找到指定的子组件；如果标记类型，还可获得代码提示
-  @ViewChild('arg') arg: ArgComponent;
+  @ViewChild('arg') arg: ArgComponent | any;
   // 随后直接通过 this 即可控制子组件的变量和方法
   changeChild() {
     this.arg.sonName = 'ringorin';
