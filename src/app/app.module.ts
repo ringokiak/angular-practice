@@ -2,7 +2,7 @@
  * @Author: r1ngo
  * @Date: 2022-03-20 10:12:21
  * @LastEditors: r1ngo
- * @LastEditTime: 2022-03-23 09:37:46
+ * @LastEditTime: 2022-03-23 10:59:28
  * @Description: ez pz lemon squezzy
  */
 import { NgModule } from '@angular/core';
@@ -25,6 +25,8 @@ import { PipComponent } from './views/pip/pip.component';
 import { ArgComponent } from './views/arg/arg.component';
 import { SerComponent } from './views/ser/ser.component';
 import { LifComponent } from './views/lif/lif.component';
+import { EmptyComponent } from './views/empty/empty.component';
+import { HomeComponent } from './views/home/home.component';
 
 @NgModule({
   // 组件、指令、管道声明
@@ -39,6 +41,8 @@ import { LifComponent } from './views/lif/lif.component';
     ArgComponent,
     SerComponent,
     LifComponent,
+    EmptyComponent,
+    HomeComponent,
   ],
   // 依赖注入
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
