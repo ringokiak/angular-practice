@@ -2,10 +2,34 @@
  * @Author: r1ngo
  * @Date: 2022-03-20 10:12:21
  * @LastEditors: r1ngo
- * @LastEditTime: 2022-03-23 11:05:13
+ * @LastEditTime: 2022-03-23 11:25:04
  * @Description: ez pz lemon squezzy
 -->
 <h1>{{ title }}</h1>
+<!-- 切换路由 -->
+<ul>
+  <li>
+    <a routerLink="/whatever">去404</a>
+  </li>
+  <!-- A 标签跳转 -->
+  <li>
+    <a routerLink="/detail/{{ 1 }}">去详情</a>
+  </li>
+  <!-- 另一种传参形式 -->
+  <li>
+    <a [routerLink]="['/detail', 1]">去详情</a>
+  </li>
+  <!-- JS 方式跳转 -->
+  <li>
+    <button (click)="goDetailWay1(1)">去详情</button>
+  </li>
+  <li>
+    <button (click)="goDetailWay2()">去详情</button>
+  </li>
+  <li>
+    <button (click)="goDetailWay3(1)">去详情</button>
+  </li>
+</ul>
 <!-- 切换组件 -->
 <div>
   <button (click)="active = 0">隐藏全部</button>

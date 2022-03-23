@@ -27,6 +27,7 @@ import { SerComponent } from './views/ser/ser.component';
 import { LifComponent } from './views/lif/lif.component';
 import { EmptyComponent } from './views/empty/empty.component';
 import { HomeComponent } from './views/home/home.component';
+import { DetailComponent } from './views/detail/detail.component';
 
 @NgModule({
   // 组件、指令、管道声明
@@ -43,6 +44,7 @@ import { HomeComponent } from './views/home/home.component';
     LifComponent,
     EmptyComponent,
     HomeComponent,
+    DetailComponent,
   ],
   // 依赖注入
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
